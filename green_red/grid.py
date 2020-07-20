@@ -57,11 +57,6 @@ class Grid:
             self.__reset_generation_zero(new_generation)
         return times_green
 
-    def __repr__(self):
-        self.generation_zero = [x.num for sublist in self.generation_zero for x in sublist]
-        return self.generation_zero
-
-
     def __data_type_valid(self, data):
         if not isinstance(data, int) and not data.isdigit():
             raise TypeError("args should contain only elements for which isdigit() = True or type is int")
